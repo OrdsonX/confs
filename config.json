@@ -6767,9 +6767,9 @@
   },
   "PokemonEvolveFilter": {
     "Rattata": {
-      "MinIV": 0.0,
-      "MinLV": 0.0,
-      "MinCP": 0.0,
+      "MinIV": 100.0,
+      "MinLV": 28.0,
+      "MinCP": 500.0,
       "Moves": [],
       "Operator": "or",
       "EvolveTo": "",
