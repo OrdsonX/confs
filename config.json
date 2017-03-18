@@ -6,7 +6,7 @@
     "DetailedCountsBeforeRecycling": true
   },
   "UpdateConfig": {
-    "SchemaVersion": 20,
+    "SchemaVersion": 21,
     "CheckForUpdates": true,
     "AutoUpdate": true
   },
@@ -17,11 +17,11 @@
   "LocationConfig": {
     "DisableHumanWalking": false,
     "StartFromLastPosition": true,
-    "DefaultLatitude": 40.7649455289399,
-    "DefaultLongitude": -73.9725996980178,
+    "DefaultLatitude": 40.7648113969184,
+    "DefaultLongitude": -73.9730072021484,
     "WalkingSpeedInKilometerPerHour": 8.0,
     "UseWalkingSpeedVariant": true,
-    "WalkingSpeedVariant": 1.2,
+    "WalkingSpeedVariant": 30.0,
     "ShowVariantWalking": false,
     "RandomlyPauseAtStops": true,
     "MaxSpawnLocationOffset": 10,
@@ -37,7 +37,7 @@
     "GpxFile": "GPXPath.GPX"
   },
   "SnipeConfig": {
-    "UseSnipeLocationServer": false,
+    "UseSnipeLocationServer": true,
     "SnipeLocationServer": "localhost",
     "SnipeLocationServerPort": 16969,
     "MinPokeballsToSnipe": 20,
@@ -47,14 +47,14 @@
     "SnipeAtPokestops": false,
     "SnipeIgnoreUnknownIv": false,
     "UseTransferIvForSnipe": false,
-    "SnipePokemonNotInPokedex": false,
+    "SnipePokemonNotInPokedex": true,
     "UseSnipeLimit": true,
     "SnipeRestSeconds": 600,
     "SnipeCountLimit": 39,
     "ActivateMSniper": true,
     "MinIVForAutoSnipe": 100,
     "MinLevelForAutoSnipe": 0,
-    "AutosnipeVerifiedOnly": false,
+    "AutosnipeVerifiedOnly": true,
     "DefaultAutoSnipeCandy": 0,
     "SnipePauseOnOutOfBallTime": 5,
     "AutoSnipeMaxDistance": 0.0,
@@ -89,7 +89,7 @@
   },
   "DataSharingConfig": {
     "EnableSyncData": true,
-    "AutoSnipe": false,
+    "AutoSnipe": true,
     "DataServiceIdentification": "",
     "SnipeDataAccessKey": "",
     "EnableFailoverDataServers": true,
@@ -132,7 +132,7 @@
         "Value": "solarBeam"
       }
     ],
-    "Enable": true,
+    "Enable": false,
     "PrioritizeGymOverPokestop": true,
     "MaxDistance": 500.0,
     "DefaultTeam": "Blue",
@@ -142,12 +142,12 @@
     "UseRandomPokemon": true,
     "NumberOfTopPokemonToBeExcluded": 10,
     "CollectCoinAfterDeployed": 1,
-    "EnableAttackGym": true,
+    "EnableAttackGym": false,
     "MaxGymLevelToAttack": 3,
     "MaxDefendersToAttack": 3,
-    "HealDefendersBeforeApplyToGym": true,
-    "DontAttackAfterCoinsLimitReached": true,
-    "EnableGymTraining": true,
+    "HealDefendersBeforeApplyToGym": false,
+    "DontAttackAfterCoinsLimitReached": false,
+    "EnableGymTraining": false,
     "TrainGymWhenMissingMaxPoints": 1000,
     "MaxGymLvlToTrain": 4,
     "TrainAlreadyDefendedGym": true,
@@ -291,7 +291,7 @@
     "UseUltraBallBelowCatchProbability": 0.1,
     "UseMasterBallBelowCatchProbability": 0.05,
     "AutomaticallyLevelUpPokemon": false,
-    "OnlyUpgradeFavorites": false,
+    "OnlyUpgradeFavorites": true,
     "UseLevelUpList": true,
     "AmountOfTimesToUpgradeLoop": 5,
     "GetMinStarDustForLevelUp": 5000,
@@ -313,7 +313,7 @@
     "PrioritizeIvOverCp": true,
     "KeepMinDuplicatePokemon": 1,
     "UsePokemonToNotCatchFilter": true,
-    "UsePokemonSniperFilterOnly": false,
+    "UsePokemonToCatchLocallyListOnly": false,
     "DumpPokemonStats": false,
     "DelayBetweenPokemonUpgrade": 10000,
     "OutOfBallCatchBlockTime": 5,
@@ -372,7 +372,7 @@
     "RenamePokemonActionDelay": 2000,
     "UseNearActionRandom": true,
     "RandomizeSettingsByPercent": 5,
-    "AutoFinishTutorial": false
+    "AutoFinishTutorial": true
   },
   "SoftBanConfig": {
     "FastSoftBanBypass": false,
@@ -391,7 +391,7 @@
     "YoursWalkHeuristic": "bicycle"
   },
   "MapzenWalkConfig": {
-    "UseMapzenWalk": false,
+    "UseMapzenWalk": true,
     "MapzenTurnByTurnApiKey": null,
     "MapzenWalkHeuristic": "bicycle",
     "MapzenElevationApiKey": null
@@ -521,24 +521,82 @@
   "PokemonsNotToTransfer": [
     "venusaur",
     "charizard",
-    "gyarados",
-    "lapras",
-    "vaporeon",
-    "jolteon",
-    "flareon",
-    "snorlax",
-    "dragonite",
     "blastoise",
     "clefable",
     "muk",
     "chansey",
+    "gyarados",
+    "lapras",
     "ditto",
+    "vaporeon",
+    "jolteon",
+    "flareon",
+    "snorlax",
     "articuno",
     "zapdos",
     "moltres",
+    "dragonite",
     "mewtwo",
     "mew"
   ],
+  "PokemonToCatchLocally": {
+    "Pokemon": [
+      "venusaur",
+      "charizard",
+      "blastoise",
+      "beedrill",
+      "raichu",
+      "sandslash",
+      "nidoking",
+      "nidoqueen",
+      "clefable",
+      "ninetales",
+      "golbat",
+      "vileplume",
+      "golduck",
+      "primeape",
+      "arcanine",
+      "poliwrath",
+      "alakazam",
+      "machamp",
+      "golem",
+      "rapidash",
+      "slowbro",
+      "farfetchd",
+      "muk",
+      "cloyster",
+      "gengar",
+      "exeggutor",
+      "marowak",
+      "hitmonchan",
+      "lickitung",
+      "rhydon",
+      "chansey",
+      "kangaskhan",
+      "starmie",
+      "mrMime",
+      "scyther",
+      "magmar",
+      "electabuzz",
+      "jynx",
+      "gyarados",
+      "lapras",
+      "ditto",
+      "vaporeon",
+      "jolteon",
+      "flareon",
+      "porygon",
+      "kabutops",
+      "aerodactyl",
+      "snorlax",
+      "articuno",
+      "zapdos",
+      "moltres",
+      "dragonite",
+      "mewtwo",
+      "mew"
+    ]
+  },
   "PokemonsToLevelUp": [],
   "PokemonsToIgnore": [],
   "CaptchaConfig": {
@@ -575,7 +633,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Aerodactyl": {
       "KeepMinCp": 1250,
@@ -593,7 +651,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Venusaur": {
       "KeepMinCp": 1800,
@@ -611,7 +669,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Farfetchd": {
       "KeepMinCp": 1250,
@@ -624,7 +682,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Krabby": {
       "KeepMinCp": 1250,
@@ -637,7 +695,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Kangaskhan": {
       "KeepMinCp": 1500,
@@ -650,7 +708,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Horsea": {
       "KeepMinCp": 1250,
@@ -663,7 +721,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Staryu": {
       "KeepMinCp": 1250,
@@ -676,7 +734,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "MrMime": {
       "KeepMinCp": 1250,
@@ -689,7 +747,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Scyther": {
       "KeepMinCp": 1800,
@@ -702,7 +760,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Jynx": {
       "KeepMinCp": 1250,
@@ -715,7 +773,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Charizard": {
       "KeepMinCp": 1250,
@@ -733,7 +791,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Electabuzz": {
       "KeepMinCp": 1250,
@@ -751,7 +809,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Magmar": {
       "KeepMinCp": 1500,
@@ -764,7 +822,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Pinsir": {
       "KeepMinCp": 1800,
@@ -782,7 +840,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Tauros": {
       "KeepMinCp": 1250,
@@ -795,7 +853,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Magikarp": {
       "KeepMinCp": 200,
@@ -808,7 +866,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Exeggutor": {
       "KeepMinCp": 1800,
@@ -826,7 +884,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Gyarados": {
       "KeepMinCp": 1250,
@@ -844,7 +902,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Lapras": {
       "KeepMinCp": 1800,
@@ -862,7 +920,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Eevee": {
       "KeepMinCp": 1250,
@@ -875,7 +933,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Vaporeon": {
       "KeepMinCp": 1500,
@@ -893,7 +951,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Jolteon": {
       "KeepMinCp": 1500,
@@ -906,7 +964,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Flareon": {
       "KeepMinCp": 1500,
@@ -924,7 +982,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Porygon": {
       "KeepMinCp": 1250,
@@ -937,7 +995,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "or",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Arcanine": {
       "KeepMinCp": 1800,
@@ -955,7 +1013,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Snorlax": {
       "KeepMinCp": 2600,
@@ -973,7 +1031,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Dragonite": {
       "KeepMinCp": 2600,
@@ -991,7 +1049,7 @@
       "DeprecatedMoves": null,
       "MovesOperator": "and",
       "CatchOnlyPokemonMeetTransferCriteria": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
     "Blastoise": {
       "KeepMinCp": 1250,
@@ -1631,13 +1689,13 @@
   },
   "PokemonUpgradeFilters": {
     "Dratini": {
-      "UpgradePokemonLvlMinimum": 30.0,
+      "UpgradePokemonLvlMinimum": 100.0,
       "UpgradePokemonCpMinimum": 600.0,
       "UpgradePokemonIvMinimum": 99.0,
       "UpgradePokemonMinimumStatsOperator": "or",
       "OnlyUpgradeFavorites": false,
-      "Moves": null,
-      "AffectToPokemons": null
+      "Moves": [],
+      "AffectToPokemons": []
     }
   },
   "MultipleBotConfig": {
@@ -1667,71 +1725,2755 @@
     "Recipients": ""
   },
   "SnipePokemonFilter": {
-    "Lapras": {
-      "SnipeIV": 0,
+    "Abra": {
+      "SnipeIV": 90,
       "Moves": [],
-      "Operator": "or",
-      "VerifiedOnly": false,
+      "Operator": "and",
+      "VerifiedOnly": true,
       "Priority": 5,
-      "AutoSnipeCandy": 2000,
-      "Level": 0,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
       "AllowMultiAccountSnipe": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
-    "Dragonite": {
-      "SnipeIV": 0,
+    "Kadabra": {
+      "SnipeIV": 90,
       "Moves": [],
-      "Operator": "or",
-      "VerifiedOnly": false,
+      "Operator": "and",
+      "VerifiedOnly": true,
       "Priority": 5,
-      "AutoSnipeCandy": 2000,
-      "Level": 0,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
       "AllowMultiAccountSnipe": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
-    "Snorlax": {
-      "SnipeIV": 0,
+    "Alakazam": {
+      "SnipeIV": 90,
       "Moves": [],
-      "Operator": "or",
-      "VerifiedOnly": false,
+      "Operator": "and",
+      "VerifiedOnly": true,
       "Priority": 5,
-      "AutoSnipeCandy": 2000,
-      "Level": 0,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
       "AllowMultiAccountSnipe": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
+    },
+    "Aerodactyl": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Articuno": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Bellsprout": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Weepinbell": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Victreebel": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Bulbasaur": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ivysaur": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Venusaur": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Caterpie": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Metapod": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Butterfree": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Chansey": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Charmander": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Charmeleon": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Charizard": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Clefairy": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Clefable": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Cubone": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Marowak": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Diglett": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Dugtrio": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ditto": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Doduo": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Dodrio": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
     },
     "Dratini": {
-      "SnipeIV": 0,
+      "SnipeIV": 90,
       "Moves": [],
-      "Operator": "or",
-      "VerifiedOnly": false,
+      "Operator": "and",
+      "VerifiedOnly": true,
       "Priority": 5,
-      "AutoSnipeCandy": 2000,
-      "Level": 0,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
       "AllowMultiAccountSnipe": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
+    },
+    "Dragonair": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Dragonite": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Drowzee": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Hypno": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Electabuzz": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ekans": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Arbok": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Eevee": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Vaporeon": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Jolteon": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Flareon": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Exeggcute": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Exeggutor": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Farfetchd": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Gastly": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Haunter": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Gengar": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Geodude": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Graveler": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Golem": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Goldeen": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Seaking": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Grimer": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Muk": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Growlithe": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Arcanine": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Hitmonlee": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Hitmonchan": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Horsea": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Seadra": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Jigglypuff": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Wigglytuff": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Jynx": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Kabuto": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Kabutops": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Kangaskhan": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Koffing": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Weezing": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Krabby": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Kingler": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Lapras": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Lickitung": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Machop": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Machoke": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Machamp": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Magikarp": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Gyarados": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Magmar": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Magnemite": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Magneton": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Mankey": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Primeape": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Meowth": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Persian": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Mew": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Mewtwo": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "MrMime": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Moltres": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "NidoranMale": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Nidorino": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Nidoking": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "NidoranFemale": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Nidorina": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Nidoqueen": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Oddish": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Gloom": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Vileplume": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Omanyte": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Omastar": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Onix": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Paras": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Parasect": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pidgey": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pidgeotto": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pidgeot": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pinsir": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pikachu": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Raichu": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Poliwag": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Poliwhirl": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Poliwrath": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ponyta": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Rapidash": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Porygon": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Psyduck": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Golduck": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Rattata": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Raticate": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
     },
     "Rhyhorn": {
-      "SnipeIV": 0,
+      "SnipeIV": 90,
       "Moves": [],
-      "Operator": "or",
-      "VerifiedOnly": false,
+      "Operator": "and",
+      "VerifiedOnly": true,
       "Priority": 5,
-      "AutoSnipeCandy": 2000,
-      "Level": 0,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
       "AllowMultiAccountSnipe": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
     },
-    "Abra": {
-      "SnipeIV": 0,
+    "Rhydon": {
+      "SnipeIV": 90,
       "Moves": [],
-      "Operator": "or",
-      "VerifiedOnly": false,
+      "Operator": "and",
+      "VerifiedOnly": true,
       "Priority": 5,
-      "AutoSnipeCandy": 2000,
-      "Level": 0,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
       "AllowMultiAccountSnipe": false,
-      "AffectToPokemons": null
+      "AffectToPokemons": []
+    },
+    "Sandshrew": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Sandslash": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Seel": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Dewgong": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Shellder": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Cloyster": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Scyther": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Slowpoke": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Slowbro": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Snorlax": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Spearow": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Fearow": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Staryu": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Starmie": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Squirtle": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Wartortle": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Blastoise": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Tangela": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Tauros": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Tentacool": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Tentacruel": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Venonat": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Venomoth": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Voltorb": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Electrode": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Vulpix": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ninetales": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Weedle": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Kakuna": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Beedrill": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Zapdos": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Zubat": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Golbat": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Chikorita": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Bayleef": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Meganium": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Cyndaquil": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Quilava": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Typhlosion": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Totodile": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Croconaw": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Feraligatr": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Sentret": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Furret": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Hoothoot": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Noctowl": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ledyba": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ledian": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Spinarak": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ariados": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Crobat": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Chinchou": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Lanturn": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pichu": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Cleffa": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Igglybuff": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Togepi": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Togetic": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Natu": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Xatu": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Mareep": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Flaaffy": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ampharos": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Bellossom": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Marill": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Azumarill": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Sudowoodo": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Politoed": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Hoppip": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Skiploom": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Jumpluff": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Aipom": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Sunkern": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Sunflora": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Yanma": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Wooper": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Quagsire": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Espeon": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Umbreon": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Murkrow": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Slowking": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Misdreavus": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Unown": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Wobbuffet": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Girafarig": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pineco": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Forretress": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Dunsparce": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Gligar": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Steelix": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Snubbull": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Granbull": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Qwilfish": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Scizor": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Shuckle": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Heracross": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Sneasel": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Teddiursa": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Ursaring": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Slugma": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Magcargo": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Swinub": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Piloswine": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Corsola": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Remoraid": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Octillery": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Delibird": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Mantine": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Skarmory": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Houndour": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Houndoom": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Kingdra": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Phanpy": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Donphan": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Porygon2": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Stantler": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Smeargle": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Tyrogue": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Hitmontop": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Smoochum": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Elekid": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Magby": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Miltank": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Blissey": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Raikou": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Entei": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Suicune": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Larvitar": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Pupitar": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Tyranitar": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Lugia": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
+    },
+    "Celebi": {
+      "SnipeIV": 90,
+      "Moves": [],
+      "Operator": "and",
+      "VerifiedOnly": true,
+      "Priority": 5,
+      "AutoSnipeCandy": 0,
+      "Level": 15,
+      "AllowMultiAccountSnipe": false,
+      "AffectToPokemons": []
     }
   },
   "PokemonEvolveFilter": {},
@@ -1777,7 +4519,7 @@
       "IV": 30,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1785,7 +4527,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1793,7 +4535,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1801,7 +4543,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1809,7 +4551,7 @@
       "IV": 70,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1817,7 +4559,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1825,7 +4567,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1833,7 +4575,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1841,7 +4583,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1849,7 +4591,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 100,
       "Moves": []
     },
@@ -1857,7 +4599,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1865,7 +4607,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1873,7 +4615,7 @@
       "IV": 70,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1881,7 +4623,7 @@
       "IV": 90,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 100,
       "Moves": []
     },
@@ -1889,7 +4631,7 @@
       "IV": 30,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1897,7 +4639,7 @@
       "IV": 80,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1905,7 +4647,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1913,7 +4655,7 @@
       "IV": 10,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     },
@@ -1921,7 +4663,7 @@
       "IV": 95,
       "RemainTimes": 60,
       "Operator": "or",
-      "AffectToPokemons": null,
+      "AffectToPokemons": [],
       "LV": 0,
       "Moves": []
     }
@@ -1931,7 +4673,7 @@
     "SnipeListRefreshInterval": 10
   },
   "HumanlikeDelays": {
-    "UseHumanlikeDelays": false,
+    "UseHumanlikeDelays": true,
     "CatchSuccessDelay": 13000,
     "CatchErrorDelay": 1000,
     "CatchEscapeDelay": 3500,
