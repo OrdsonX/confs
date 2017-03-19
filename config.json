@@ -336,7 +336,7 @@
     "ByPassCatchFlee": false
   },
   "RecycleConfig": {
-    "VerboseRecycling": false,
+    "VerboseRecycling": true,
     "RecycleInventoryAtUsagePercentage": 50.0,
     "RandomizeRecycle": false,
     "RandomRecycleValue": 3,
