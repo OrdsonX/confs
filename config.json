@@ -1,6 +1,6 @@
 ﻿{
   "ConsoleConfig": {
-    "TranslationLanguageCode": "fr",
+    "TranslationLanguageCode": "en",
     "StartupWelcomeDelay": false,
     "AmountOfPokemonToDisplayOnStart": 2,
     "DetailedCountsBeforeRecycling": false
@@ -15,17 +15,17 @@
     "WebSocketPort": 14251
   },
   "LocationConfig": {
-    "DisableHumanWalking": true,
-    "StartFromLastPosition": false,
-    "DefaultLatitude": 40.7686763705655,
-    "DefaultLongitude": -73.9768166980571,
-    "WalkingSpeedInKilometerPerHour": 8.0,
+    "DisableHumanWalking": false,
+    "StartFromLastPosition": true,
+    "DefaultLatitude": 40.7649583284561,
+    "DefaultLongitude": -73.9731711614599,
+    "WalkingSpeedInKilometerPerHour": 30.0,
     "UseWalkingSpeedVariant": true,
-    "WalkingSpeedVariant": 8.18,
+    "WalkingSpeedVariant": 30.0,
     "ShowVariantWalking": false,
     "RandomlyPauseAtStops": false,
-    "MaxSpawnLocationOffset": 300,
-    "MaxTravelDistanceInMeters": 1742
+    "MaxSpawnLocationOffset": 10,
+    "MaxTravelDistanceInMeters": 1000
   },
   "TelegramConfig": {
     "UseTelegramAPI": false,
@@ -91,7 +91,7 @@
     "EnableSyncData": true,
     "AutoSnipe": true,
     "DataServiceIdentification": "",
-    "SnipeDataAccessKey": "",
+    "SnipeDataAccessKey": "public",
     "EnableFailoverDataServers": true,
     "FailoverDataServers": "ws://s1.mypogosnipers.com/socket.io/?EIO=3&transport=websocket;ws://s2.mypogosnipers.com/socket.io/?EIO=3&transport=websocket",
     "DataRecieverURL": "ws://necrosocket.herokuapp.com/socket.io/?EIO=3&transport=websocket"
@@ -135,14 +135,14 @@
     "Enable": false,
     "PrioritizeGymOverPokestop": true,
     "MaxDistance": 500.0,
-    "DefaultTeam": "Yellow",
+    "DefaultTeam": "Blue",
     "MaxCPToDeploy": 1800,
     "MaxLevelToDeploy": 16,
     "VisitTimeout": 60,
     "UseRandomPokemon": false,
     "NumberOfTopPokemonToBeExcluded": 10,
     "CollectCoinAfterDeployed": 1,
-    "EnableAttackGym": false,
+    "EnableAttackGym": true,
     "MaxGymLevelToAttack": 3,
     "MaxDefendersToAttack": 3,
     "HealDefendersBeforeApplyToGym": true,
@@ -263,9 +263,9 @@
   },
   "PokemonConfig": {
     "CatchPokemon": true,
-    "DelayBetweenPokemonCatch": 100,
+    "DelayBetweenPokemonCatch": 2000,
     "UseCatchLimit": true,
-    "CatchPokemonLimit": 800,
+    "CatchPokemonLimit": 700,
     "CatchPokemonLimitMinutes": 1350,
     "UseIncenseConstantly": false,
     "UseEggIncubators": true,
@@ -282,9 +282,9 @@
     "FavoriteMinIvPercentage": 100.0,
     "AutoFavoritePokemon": false,
     "MaxPokeballsPerPokemon": 6,
-    "UseGreatBallAboveCp": 500,
-    "UseUltraBallAboveCp": 1500,
-    "UseMasterBallAboveCp": 2000,
+    "UseGreatBallAboveCp": 1000,
+    "UseUltraBallAboveCp": 1250,
+    "UseMasterBallAboveCp": 1500,
     "UseGreatBallAboveIv": 85.0,
     "UseUltraBallAboveIv": 95.0,
     "UseGreatBallBelowCatchProbability": 0.2,
@@ -305,14 +305,14 @@
     "EvolveKeptPokemonsAtStorageUsagePercentage": 40.0,
     "EvolveKeptPokemonIfBagHasOverThisManyPokemon": 20,
     "KeepPokemonsThatCanEvolve": false,
-    "KeepMinCp": 3250,
+    "KeepMinCp": 1250,
     "KeepMinIvPercentage": 100.0,
     "KeepMinLvl": 6,
     "KeepMinOperator": "or",
     "UseKeepMinLvl": false,
     "PrioritizeIvOverCp": true,
     "KeepMinDuplicatePokemon": 1,
-    "UsePokemonToNotCatchFilter": false,
+    "UsePokemonToNotCatchFilter": true,
     "UsePokemonToCatchLocallyListOnly": false,
     "DumpPokemonStats": false,
     "DelayBetweenPokemonUpgrade": 10000,
@@ -320,7 +320,7 @@
     "PokeballToKeepForSnipe": 50,
     "UseBulkTransferPokemon": true,
     "BulkTransferStogareBuffer": 95,
-    "BulkTransferSize": 10,
+    "BulkTransferSize": 100,
     "UseBallOperator": "or",
     "FavoriteMinCp": 0.0,
     "DefaultBuddyPokemon": "",
@@ -340,9 +340,9 @@
     "RecycleInventoryAtUsagePercentage": 50.0,
     "RandomizeRecycle": false,
     "RandomRecycleValue": 3,
-    "TotalAmountOfPokeballsToKeep": 140,
-    "TotalAmountOfPotionsToKeep": 85,
-    "TotalAmountOfRevivesToKeep": 85,
+    "TotalAmountOfPokeballsToKeep": 150,
+    "TotalAmountOfPotionsToKeep": 90,
+    "TotalAmountOfRevivesToKeep": 90,
     "TotalAmountOfBerriesToKeep": 20,
     "UseRecyclePercentsInsteadOfTotals": false,
     "PercentOfInventoryPokeballsToKeep": 35,
@@ -352,7 +352,7 @@
   },
   "CustomCatchConfig": {
     "EnableHumanizedThrows": false,
-    "EnableMissedThrows": false,
+    "EnableMissedThrows": true,
     "ThrowMissPercentage": 25,
     "NiceThrowChance": 40,
     "GreatThrowChance": 30,
@@ -362,16 +362,16 @@
     "ForceExcellentThrowOverIv": 95.0,
     "ForceGreatThrowOverCp": 1000,
     "ForceExcellentThrowOverCp": 1500,
-    "UseTransferFilterToCatch": false
+    "UseTransferFilterToCatch": true
   },
   "PlayerConfig": {
-    "DelayBetweenPlayerActions": 124,
-    "EvolveActionDelay": 200,
-    "TransferActionDelay": 100,
-    "RecycleActionDelay": 100,
-    "RenamePokemonActionDelay": 200,
+    "DelayBetweenPlayerActions": 4000,
+    "EvolveActionDelay": 20000,
+    "TransferActionDelay": 5000,
+    "RecycleActionDelay": 1000,
+    "RenamePokemonActionDelay": 2000,
     "UseNearActionRandom": true,
-    "RandomizeSettingsByPercent": 9,
+    "RandomizeSettingsByPercent": 5,
     "AutoFinishTutorial": true
   },
   "SoftBanConfig": {
@@ -6766,88 +6766,6 @@
     }
   },
   "PokemonEvolveFilter": {
-    "Rattata": {
-      "MinIV": 100.0,
-      "MinLV": 28.0,
-      "MinCP": 500.0,
-      "Moves": [],
-      "Operator": "or",
-      "EvolveTo": "",
-      "AffectToPokemons": [
-        "zubat",
-        "pidgey",
-        "caterpie",
-        "weedle"
-      ],
-      "FavoritedOnly": false,
-      "MinCandiesBeforeEvolve": 0
-    },
-    "Porygon": {
-      "MinIV": 100.0,
-      "MinLV": 28.0,
-      "MinCP": 500.0,
-      "Moves": [],
-      "Operator": "and",
-      "EvolveTo": "Porygon2",
-      "AffectToPokemons": null,
-      "FavoritedOnly": false,
-      "MinCandiesBeforeEvolve": 0
-    },
-    "Gloom": {
-      "MinIV": 100.0,
-      "MinLV": 28.0,
-      "MinCP": 500.0,
-      "Moves": [],
-      "Operator": "and",
-      "EvolveTo": "Bellossom",
-      "AffectToPokemons": null,
-      "FavoritedOnly": false,
-      "MinCandiesBeforeEvolve": 0
-    },
-    "Sunkern": {
-      "MinIV": 100.0,
-      "MinLV": 28.0,
-      "MinCP": 500.0,
-      "Moves": [],
-      "Operator": "and",
-      "EvolveTo": "Sunflora",
-      "AffectToPokemons": null,
-      "FavoritedOnly": false,
-      "MinCandiesBeforeEvolve": 0
-    },
-    "Slowpoke": {
-      "MinIV": 100.0,
-      "MinLV": 28.0,
-      "MinCP": 500.0,
-      "Moves": [],
-      "Operator": "and",
-      "EvolveTo": "Slowking",
-      "AffectToPokemons": null,
-      "FavoritedOnly": false,
-      "MinCandiesBeforeEvolve": 0
-    },
-    "Poliwhirl": {
-      "MinIV": 100.0,
-      "MinLV": 28.0,
-      "MinCP": 500.0,
-      "Moves": [],
-      "Operator": "and",
-      "EvolveTo": "Politoed",
-      "AffectToPokemons": null,
-      "FavoritedOnly": false,
-      "MinCandiesBeforeEvolve": 0
-    },
-    "Seadra": {
-      "MinIV": 100.0,
-      "MinLV": 28.0,
-      "MinCP": 500.0,
-      "Moves": [],
-      "Operator": "and",
-      "EvolveTo": "Kingdra",
-      "AffectToPokemons": null,
-      "FavoritedOnly": false,
-      "MinCandiesBeforeEvolve": 0
-    },
     "Dratini": {
       "MinIV": 100.0,
       "MinLV": 30.0,
@@ -7052,16 +6970,16 @@
     }
   },
   "UIConfig": {
-    "SnipeItemListDisplayTime": 50,
-    "SnipeListRefreshInterval": 5
+    "SnipeItemListDisplayTime": 150,
+    "SnipeListRefreshInterval": 10
   },
   "HumanlikeDelays": {
-    "UseHumanlikeDelays": false,
-    "CatchSuccessDelay": 100,
-    "CatchErrorDelay": 100,
-    "CatchEscapeDelay": 50,
-    "CatchFleeDelay": 100,
-    "CatchMissedDelay": 100,
-    "BeforeCatchDelay": 50
+    "UseHumanlikeDelays": true,
+    "CatchSuccessDelay": 13000,
+    "CatchErrorDelay": 1000,
+    "CatchEscapeDelay": 3500,
+    "CatchFleeDelay": 2000,
+    "CatchMissedDelay": 1000,
+    "BeforeCatchDelay": 1500
   }
 }
