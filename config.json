@@ -17,8 +17,8 @@
   "LocationConfig": {
     "DisableHumanWalking": false,
     "StartFromLastPosition": true,
-    "DefaultLatitude": 40.7649583284561,
-    "DefaultLongitude": -73.9731711614599,
+    "DefaultLatitude": 40.7624420010705,
+    "DefaultLongitude": -73.9744612433741,
     "WalkingSpeedInKilometerPerHour": 30.0,
     "UseWalkingSpeedVariant": true,
     "WalkingSpeedVariant": 30.0,
@@ -89,9 +89,9 @@
   },
   "DataSharingConfig": {
     "EnableSyncData": true,
-    "AutoSnipe": true,
-    "DataServiceIdentification": "",
-    "SnipeDataAccessKey": "public",
+    "AutoSnipe": false,
+    "DataServiceIdentification": "fc426bde-7434-45fc-bcbb-aec86bea0675",
+    "SnipeDataAccessKey": "",
     "EnableFailoverDataServers": true,
     "FailoverDataServers": "ws://s1.mypogosnipers.com/socket.io/?EIO=3&transport=websocket;ws://s2.mypogosnipers.com/socket.io/?EIO=3&transport=websocket",
     "DataRecieverURL": "ws://necrosocket.herokuapp.com/socket.io/?EIO=3&transport=websocket"
@@ -132,7 +132,7 @@
         "Value": "solarBeam"
       }
     ],
-    "Enable": false,
+    "Enable": true,
     "PrioritizeGymOverPokestop": true,
     "MaxDistance": 500.0,
     "DefaultTeam": "Blue",
@@ -351,8 +351,8 @@
     "PercentOfInventoryBerriesToKeep": 10
   },
   "CustomCatchConfig": {
-    "EnableHumanizedThrows": false,
-    "EnableMissedThrows": true,
+    "EnableHumanizedThrows": true,
+    "EnableMissedThrows": false,
     "ThrowMissPercentage": 25,
     "NiceThrowChance": 40,
     "GreatThrowChance": 30,
