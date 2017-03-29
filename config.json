@@ -6,7 +6,7 @@
     "DetailedCountsBeforeRecycling": false
   },
   "UpdateConfig": {
-    "SchemaVersion": 21,
+    "SchemaVersion": 22,
     "CheckForUpdates": true,
     "AutoUpdate": true
   },
@@ -17,8 +17,8 @@
   "LocationConfig": {
     "DisableHumanWalking": false,
     "StartFromLastPosition": true,
-    "DefaultLatitude": 40.7624420010705,
-    "DefaultLongitude": -73.9744612433741,
+    "DefaultLatitude": 40.7701632578505,
+    "DefaultLongitude": -73.9793242890663,
     "WalkingSpeedInKilometerPerHour": 30.0,
     "UseWalkingSpeedVariant": true,
     "WalkingSpeedVariant": 30.0,
@@ -89,8 +89,8 @@
   },
   "DataSharingConfig": {
     "EnableSyncData": true,
-    "AutoSnipe": false,
-    "DataServiceIdentification": "fc426bde-7434-45fc-bcbb-aec86bea0675",
+    "AutoSnipe": true,
+    "DataServiceIdentification": "",
     "SnipeDataAccessKey": "",
     "EnableFailoverDataServers": true,
     "FailoverDataServers": "ws://s1.mypogosnipers.com/socket.io/?EIO=3&transport=websocket;ws://s2.mypogosnipers.com/socket.io/?EIO=3&transport=websocket",
@@ -132,7 +132,7 @@
         "Value": "solarBeam"
       }
     ],
-    "Enable": true,
+    "Enable": false,
     "PrioritizeGymOverPokestop": true,
     "MaxDistance": 500.0,
     "DefaultTeam": "Blue",
@@ -281,6 +281,7 @@
     "RenameTemplate": "{Name}_{IV}_Lv{Level}",
     "FavoriteMinIvPercentage": 100.0,
     "AutoFavoritePokemon": false,
+    "AutoFavoriteShinyOnCatch": true,
     "MaxPokeballsPerPokemon": 6,
     "UseGreatBallAboveCp": 1000,
     "UseUltraBallAboveCp": 1250,
@@ -328,8 +329,8 @@
     "FavoriteOperator": "and",
     "RenamePokemonRespectTransferRule": false,
     "UpgradePokemonLvlMinimum": 30.0,
-    "EvolveOperator": "and",
     "EvolveFavoritedOnly": false,
+    "EvolveOperator": "and",
     "EvolveMinIV": 100.0,
     "EvolveMinCP": 2000.0,
     "EvolveMinLevel": 25.0,
