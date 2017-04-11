@@ -6,7 +6,7 @@
     "DetailedCountsBeforeRecycling": false
   },
   "UpdateConfig": {
-    "SchemaVersion": 22,
+    "SchemaVersion": 23,
     "CheckForUpdates": true,
     "AutoUpdate": true
   },
@@ -17,11 +17,11 @@
   "LocationConfig": {
     "DisableHumanWalking": false,
     "StartFromLastPosition": true,
-    "DefaultLatitude": 40.7701632578505,
-    "DefaultLongitude": -73.9793242890663,
-    "WalkingSpeedInKilometerPerHour": 30.0,
+    "DefaultLatitude": 40.7648937681014,
+    "DefaultLongitude": -73.9730628296295,
+    "WalkingSpeedInKilometerPerHour": 13.0,
     "UseWalkingSpeedVariant": true,
-    "WalkingSpeedVariant": 30.0,
+    "WalkingSpeedVariant": 13.0,
     "ShowVariantWalking": false,
     "RandomlyPauseAtStops": false,
     "MaxSpawnLocationOffset": 10,
@@ -132,7 +132,7 @@
         "Value": "solarBeam"
       }
     ],
-    "Enable": false,
+    "Enable": true,
     "PrioritizeGymOverPokestop": true,
     "MaxDistance": 500.0,
     "DefaultTeam": "Blue",
@@ -313,6 +313,7 @@
     "UseKeepMinLvl": false,
     "PrioritizeIvOverCp": true,
     "KeepMinDuplicatePokemon": 1,
+    "KeepMaxDuplicatePokemon": 1000,
     "UsePokemonToNotCatchFilter": true,
     "UsePokemonToCatchLocallyListOnly": false,
     "DumpPokemonStats": false,
@@ -344,7 +345,7 @@
     "TotalAmountOfPokeballsToKeep": 150,
     "TotalAmountOfPotionsToKeep": 90,
     "TotalAmountOfRevivesToKeep": 90,
-    "TotalAmountOfBerriesToKeep": 20,
+    "TotalAmountOfBerriesToKeep": 10,
     "UseRecyclePercentsInsteadOfTotals": false,
     "PercentOfInventoryPokeballsToKeep": 35,
     "PercentOfInventoryPotionsToKeep": 35,
@@ -373,11 +374,13 @@
     "RenamePokemonActionDelay": 2000,
     "UseNearActionRandom": true,
     "RandomizeSettingsByPercent": 5,
-    "AutoFinishTutorial": true
+    "AutoFinishTutorial": true,
+    "SkipFirstTimeTutorial": false,
+    "SkipCollectingLevelUpRewards": false
   },
   "SoftBanConfig": {
-    "FastSoftBanBypass": false,
-    "ByPassSpinCount": 1
+    "FastSoftBanBypass": true,
+    "ByPassSpinCount": 40
   },
   "GoogleWalkConfig": {
     "UseGoogleWalk": true,
@@ -628,6 +631,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "waterGunFast",
@@ -646,6 +650,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "biteFast",
@@ -664,6 +669,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "vineWhipFast",
@@ -682,6 +688,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -695,6 +702,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -708,6 +716,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -721,6 +730,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -734,6 +744,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -747,6 +758,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -760,6 +772,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -773,6 +786,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -786,6 +800,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "wingAttackFast",
@@ -804,6 +819,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "thunderShockFast",
@@ -822,6 +838,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -835,6 +852,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "rockSmashFast",
@@ -853,6 +871,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -866,6 +885,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -879,6 +899,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "zenHeadbuttFast",
@@ -897,6 +918,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "dragonBreath",
@@ -915,6 +937,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "frostBreathFast",
@@ -933,6 +956,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -946,6 +970,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "waterGun",
@@ -964,6 +989,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -977,6 +1003,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "ember",
@@ -995,6 +1022,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": null,
       "MovesOperator": "or",
@@ -1008,6 +1036,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "fireFangFast",
@@ -1026,6 +1055,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "zenHeadbuttFast",
@@ -1044,6 +1074,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [
         [
           "dragonBreath",
@@ -1062,6 +1093,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1075,6 +1107,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1088,6 +1121,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1101,6 +1135,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1114,6 +1149,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1127,6 +1163,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1140,6 +1177,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1153,6 +1191,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1166,6 +1205,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -1179,6 +1219,7 @@
       "UseKeepMinLvl": false,
       "KeepMinOperator": "or",
       "KeepMinDuplicatePokemon": 1,
+      "KeepMaxDuplicatePokemon": 1000,
       "Moves": [],
       "DeprecatedMoves": [],
       "MovesOperator": "and",
@@ -4004,7 +4045,7 @@
     "SelectAccountOnStartUp": false,
     "CatchFleeCount": 50,
     "SwitchOnCatchLimit": true,
-    "SwitchOnPokestopLimit": false
+    "SwitchOnPokestopLimit": true
   },
   "NotificationConfig": {
     "EnablePushBulletNotification": false,
