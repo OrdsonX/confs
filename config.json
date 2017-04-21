@@ -93,8 +93,8 @@
     "DataServiceIdentification": "",
     "SnipeDataAccessKey": "",
     "EnableFailoverDataServers": true,
-    "FailoverDataServers": "ws://s1.mypogosnipers.com/socket.io/?EIO=3&transport=websocket;ws://s2.mypogosnipers.com/socket.io/?EIO=3&transport=websocket",
-    "DataRecieverURL": "ws://necrosocket.herokuapp.com/socket.io/?EIO=3&transport=websocket"
+    "FailoverDataServers": "ws://s1.mypogosnipers.com/socket.io/?EIO=3&transport=websocket;ws://s2.mypogosnipers.com/socket.io/?EIO=3&transport=websocket;ws://necrosocket.herokuapp.com/socket.io/?EIO=3&transport=websocket",
+    "DataRecieverURL": "ws://www.mypogosnipers.com/socket.io/?EIO=3&transport=websocket"
   },
   "PokeStopConfig": {
     "UsePokeStopLimit": true,
