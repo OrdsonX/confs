@@ -17,8 +17,8 @@
   "LocationConfig": {
     "DisableHumanWalking": false,
     "StartFromLastPosition": true,
-    "DefaultLatitude": 40.7648937681014,
-    "DefaultLongitude": -73.9730628296295,
+    "DefaultLatitude": 40.7599604160502,
+    "DefaultLongitude": -73.9768133550384,
     "WalkingSpeedInKilometerPerHour": 13.0,
     "UseWalkingSpeedVariant": true,
     "WalkingSpeedVariant": 13.0,
@@ -132,7 +132,7 @@
         "Value": "solarBeam"
       }
     ],
-    "Enable": true,
+    "Enable": false,
     "PrioritizeGymOverPokestop": true,
     "MaxDistance": 500.0,
     "DefaultTeam": "Blue",
@@ -339,13 +339,13 @@
   },
   "RecycleConfig": {
     "VerboseRecycling": true,
-    "RecycleInventoryAtUsagePercentage": 50.0,
+    "RecycleInventoryAtUsagePercentage": 90.0,
     "RandomizeRecycle": false,
     "RandomRecycleValue": 3,
-    "TotalAmountOfPokeballsToKeep": 150,
+    "TotalAmountOfPokeballsToKeep": 140,
     "TotalAmountOfPotionsToKeep": 90,
     "TotalAmountOfRevivesToKeep": 90,
-    "TotalAmountOfBerriesToKeep": 10,
+    "TotalAmountOfBerriesToKeep": 5,
     "UseRecyclePercentsInsteadOfTotals": false,
     "PercentOfInventoryPokeballsToKeep": 35,
     "PercentOfInventoryPotionsToKeep": 35,
